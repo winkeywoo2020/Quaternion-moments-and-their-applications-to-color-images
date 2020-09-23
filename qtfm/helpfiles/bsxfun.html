@@ -1,0 +1,24 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Nicolas Le Bihan, 2008-2013.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>bsxfun :: Functions (Quaternion Toolbox Function Reference)
+</title><link rel="stylesheet" href="qtfmstyle.css" type="text/css"></head><body><h1>Quaternion Function Reference</h1><h2>bsxfun</h2>
+<p>Binary Singleton Expansion Function<br>(Quaternion overloading of standard MATLAB&reg; function)
+</p>
+<h2>Syntax</h2><p><tt>C = bsxfun(fun, A, B)</tt></p>
+<h2>Description</h2>
+<p>
+This function is provided in order to support limited cases of its parameters
+only, in order that certain MATLAB&reg; functions will work, particularly
+<tt>var</tt>, <tt>std</tt> and <tt>cov</tt> which use
+<tt>bsxfun</tt> to apply arithmetic operators to intermediate results.
+<tt>bsxfun</tt> was introduced in MATLAB&reg; Version 7.4 (R2007a). Prior
+to that release the <tt>var</tt>, <tt>std</tt> and <tt>cov</tt>
+functions worked with quaternions, but the introduction of <tt>bsxfun</tt>
+broke this. The provision of the limited functionality in the quaternion
+overloading of <tt>bsxfun</tt> fixes this.
+</p>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc bsxfun">bsxfun</a><br>
+<h4>&copy; 2008-2013 Stephen J. Sangwine and Nicolas Le Bihan</h4><p><a href="license.html">License terms.</a></p></body></html>

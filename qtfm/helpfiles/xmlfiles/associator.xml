@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "associator" overload = "false">
+<short>Associator</short>
+<syntax>A = associator(X, Y, Z)</syntax>
+<long>
+<para>
+<code>A = associator(X, Y, Z)</code> returns
+<code>(X * Y) * Z - X * (Y * Z)</code>.
+The parameters may be quaternions, octonions, or anything else that makes
+sense.
+The multiplication used is matrix multiplication.
+No check is made on whether the parameters are of compatible types.
+</para>
+</long>
+<examples>
+    <para>
+        Matrix multiplication is associative,
+        so three random real matrices will
+        produce a zero result:
+    </para>
+<precode>
+>> A = randn(2); B = randn(2); C = randn(2);
+>> associator(A, B, C)
+
+ans =
+
+   1.0e-15 *
+
+    0.1110         0
+    0.2220   -0.0555
+</precode>
+<para>
+    Octonions are not associative, but quaternion-like subsets are, as shown
+    below:
+</para>
+<precode>
+>> associator(oi, oj, ok)
+ 
+ans = 0 * I + 0 * J + 0 * K + 0 * L + 0 * M + 0 * N + 0 * O
+ 
+>> associator(oi, ol, oo)
+ 
+ans = 0 * I + 2 * J + 0 * K + 0 * L + 0 * M + 0 * N + 0 * O  
+</precode>
+<para>
+Quaternions are associative, so any three chosen at random will have
+a zero associator.
+</para>
+<precode>
+>> associator(randq, randq, randq)
+ 
+ans = -5.551e-17 * I + 0 * J + 1.11e-16 * K
+</precode>
+</examples>
+<seealso>
+<qtfmfun name = "commutator"/>
+</seealso>
+<references>
+<reference>Richard D. Schafer,
+'An Introduction to Non-Associative Algebras',
+Academic Press, 1966. Page 13.
+</reference>
+</references>
+</function>
+
+<!--$Id: associator.xml,v 1.1 2013/03/26 15:10:22 sangwine Exp $-->

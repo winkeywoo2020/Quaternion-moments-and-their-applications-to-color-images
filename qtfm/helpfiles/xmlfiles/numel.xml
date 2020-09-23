@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "numel" overload = "both">
+<short>Number of elements in an array or subscripted array expression</short>
+<syntax>Y = numel(X)</syntax>
+<long>
+<para>
+<code>numel(X)</code> overloads a &matlab; function with subtle internal
+uses. It plays a role in subscripted indexing, and although its name suggests
+that it returns the number of elements in an array, this function DOES NOT
+return the number of quaternions in the array <code>X</code>. This can be
+obtained easily by <code>prod(size(q))</code>. The reason for
+this is complex, but connected with the way &matlab; implements subscripted
+indexing. See the notes in the &matlab; documentation for the <code>numel</code>
+function. (This function was changed in May 2008. Prior to this date, it
+did return <code>prod(size(q))</code> but this was incompatible with
+correct working of other functions.)
+</para>
+</long>
+<seealso>
+<matlabfun name = "numel"/>
+<qtfmfun name = "prod"/>
+<qtfmfun name = "size"/>
+</seealso>
+</function>
+
+<!--$Id: numel.xml,v 1.3 2013/03/26 15:50:38 sangwine Exp $-->

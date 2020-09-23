@@ -1,0 +1,74 @@
+--------------------------------------------------------------
+                Quaternion toolbox for Matlab
+                http://qtfm.sourceforge.net/
+       Mailing list: qtfm-announce@lists.sourceforge.net
+--------------------------------------------------------------
+Copyright (©) 2005-2013 Stephen J. Sangwine & Nicolas Le Bihan
+Email: sjs@essex.ac.uk, nicolas.le-bihan@gipsa-lab.inpg.fr
+--------------------------------------------------------------
+
+                     Release Notes
+
+Version 2.0  2 April 2013
+
+This major new release adds an additional class to the toolbox, for
+computing with octonions, making maximum use of existing quaternion
+functionality to implement the new octonion functions. The octonion
+code operates using the Cayley-Dickson construction, that is the
+internal representation of an octonion is an ordered pair of
+quaternions. For the moment, the octonion class should be regarded
+as experimental, and the functionality is limited compared to the
+quaternion class. We have not listed all the new octonion functions
+here, because most are overloadings of existing Matlab or quaternion
+functions. However, we have implemented the LU decomposition, and left
+and right matrix inverses that will work for small arrays (linv and rinv).
+We have also added two new functions called associator and commutator which
+take arbitrary argument types, but make most sense with quaternions and
+octonions. Functions for creating random and zero octonions follow the
+naming conventions used for the corresponding quaternion functions (e.g.
+rando corresponds to randq). Although some other functions will work for
+octonion matrices, their results may not be correct. Test code for the
+octonion functions is somewhat limited at present, but basic functionality
+is tested.
+
+CAUTION: Since the octonion algebra is not associative, multiplication of
+octonion matrices is not associative. The documentation will be updated
+gradually to add the octonion functionality, but it is likely that coverage
+will be sketchy for some time, since many existing quaternion documentation
+files need to be updated. We do not plan to change the name of the toolbox,
+since it remains first and foremost a quaternion toolbox. The octonions are
+a bonus.
+
+A new function, part, for octonions and quaternions provides indexed access
+to the components. For the quaternions this provides similar functionality
+to the existing s/scalar/x/y/z functions, but for the octonions it provides
+the only means to access the individual components of the vector part - we
+did not want to create seven named functions corresponding to the existing
+quaternion functions x/y/z.
+
+A new function scatter4 provides a way to visualise distribution
+of quaternions in four dimensions using six orthographic projections.
+scatter3 and image now support an output parameter (a graphics handle)
+just as the corresponding Matlab functions.
+
+A new function, frenet, computes the Frenet-Serret frames of a quaternion
+sequence or curve.
+
+The private function isoquaternion has been altered to fix a problem
+with the sqrt function in which sqrt(quaternion(-1)) returned zero
+rather than the correct result (0+1i) + 0 * I + 0 * J + 0 * K
+(the complex root of -1). Since isoquaternion is used in many other
+functions, this may also have an impact elsewhere, but this remains
+to be studied.
+
+The checking of Matlab version numbers in the test code has been updated.
+Note that with Matlab version 8 the Start menu has been removed. The QTFM
+documentation is accessible from the Documentation window, under Supplemental
+Software. The other functionality of the Start button seems to have
+vanished, but the test code can be run by typing qtfm_test in the command
+window.
+
+(For earlier release notes see version 1.9, or look at earlier versions of
+this file using the Sourceforge CVS repository browser.)
+
+$Id: Release_notes.txt,v 1.30 2013/04/02 14:38:27 sangwine Exp $

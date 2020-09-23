@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "vector_product" overload = "false">
+<short>Vector or cross product of two pure quaternions</short>
+<syntax>Y = vector_product(A, B)</syntax>
+<long>
+<para>
+<code>vector_product(A, B)</code> returns the vector (or cross) product of the two
+arguments, elementwise on the two arrays, which must be pure quaternions.
+</para>
+</long>
+<examples>
+The vector product of <code>qi</code> with <code>qj</code> gives <code>qk</code>:
+<precode>
+>> vector_product(qi, qj) == qk
+
+ans = 1
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "cross"/>
+<qtfmfun name = "cross"/>
+</seealso>
+</function>
+
+
+<!--$Id: vector_product.xml,v 1.4 2011/07/12 11:08:48 sangwine Exp $-->

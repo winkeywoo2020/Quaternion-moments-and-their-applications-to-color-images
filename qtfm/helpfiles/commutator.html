@@ -1,0 +1,57 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Nicolas Le Bihan, 2008-2013.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>commutator :: Functions (Quaternion Toolbox Function Reference)
+</title><link rel="stylesheet" href="qtfmstyle.css" type="text/css"></head><body><h1>Quaternion Function Reference</h1><h2>commutator</h2>
+<p>Commutator</p>
+<h2>Syntax</h2><p><tt>C = commutator(X, Y)</tt></p>
+<h2>Description</h2>
+<p>
+<tt>C = commutator(X, Y)</tt> returns
+<tt>X * Y - Y * X</tt>.
+The parameters may be quaternions, octonions, or anything else that makes
+sense.
+The multiplication used is matrix multiplication.
+No check is made on whether the parameters are of compatible types.
+</p>
+
+<h2>Examples</h2>
+<p>
+Reals commute so the commutator of any two reals will be zero: 
+</p>
+<pre>
+&gt;&gt; commutator(randn, randn)
+
+ans = 0
+</pre>
+<p>
+Matrix multiplication is not commutative, so two chosen at random will have
+a non-zero commutator:
+</p>
+<pre>
+&gt;&gt; commutator(randn(2), randn(2))
+    
+ans =  0.5833    0.7793
+      -1.1566   -0.5833
+</pre>
+<p>
+Quaternions and octonions do not commute so any two of each will have a non-zero
+commutator:
+</p>
+<pre>
+&gt;&gt; commutator(randq, randq)
+ 
+ans = -0.5486 * I + 0.2534 * J + 1.057 * K
+ 
+&gt;&gt; commutator(rando, rando)
+ 
+ans = -0.1776 * I - 0.2875 * J + 0.6161 * K - 0.6575 * L - 0.3949 * M - 1.221 * N + 0.4269 * O
+</pre>
+
+<h2>See Also</h2>QTFM function: <a href="associator.html">associator</a><br>
+<h2>References</h2><ol><li>Richard D. Schafer,
+'An Introduction to Non-Associative Algebras',
+Academic Press, 1966. Page 13.
+</li></ol>
+<h4>&copy; 2008-2013 Stephen J. Sangwine and Nicolas Le Bihan</h4><p><a href="license.html">License terms.</a></p></body></html>

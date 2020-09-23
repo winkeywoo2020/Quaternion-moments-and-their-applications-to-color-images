@@ -1,0 +1,25 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Nicolas Le Bihan, 2008-2013.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>numel :: Functions (Quaternion Toolbox Function Reference)
+</title><link rel="stylesheet" href="qtfmstyle.css" type="text/css"></head><body><h1>Quaternion Function Reference</h1><h2>numel</h2>
+<p>Number of elements in an array or subscripted array expression<br>(Quaternion and octonion overloadings of standard MATLAB&reg; function)
+</p>
+<h2>Syntax</h2><p><tt>Y = numel(X)</tt></p>
+<h2>Description</h2>
+<p>
+<tt>numel(X)</tt> overloads a MATLAB&reg; function with subtle internal
+uses. It plays a role in subscripted indexing, and although its name suggests
+that it returns the number of elements in an array, this function DOES NOT
+return the number of quaternions in the array <tt>X</tt>. This can be
+obtained easily by <tt>prod(size(q))</tt>. The reason for
+this is complex, but connected with the way MATLAB&reg; implements subscripted
+indexing. See the notes in the MATLAB&reg; documentation for the <tt>numel</tt>
+function. (This function was changed in May 2008. Prior to this date, it
+did return <tt>prod(size(q))</tt> but this was incompatible with
+correct working of other functions.)
+</p>
+
+<h2>See Also</h2>MATLAB&reg; function: <a href="matlab:doc numel">numel</a><br>QTFM functions: <a href="prod.html">prod</a>, <a href="size.html">size</a><br>
+<h4>&copy; 2008-2013 Stephen J. Sangwine and Nicolas Le Bihan</h4><p><a href="license.html">License terms.</a></p></body></html>

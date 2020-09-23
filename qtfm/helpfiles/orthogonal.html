@@ -1,0 +1,26 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Nicolas Le Bihan, 2008-2013.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>orthogonal :: Functions (Quaternion Toolbox Function Reference)
+</title><link rel="stylesheet" href="qtfmstyle.css" type="text/css"></head><body><h1>Quaternion Function Reference</h1><h2>orthogonal</h2>
+<p>Construct a unit pure quaternion orthogonal to another</p>
+<h2>Syntax</h2><p><tt>U = orthogonal(V, W)</tt></p>
+<h2>Description</h2>
+<p>
+<tt>orthogonal(V, W)</tt> constructs and returns a unit pure quaternion
+orthogonal to <tt>V</tt>, and <tt>W</tt> if given. <tt>V</tt>
+and <tt>W</tt> must be pure quaternions, but need not have unit modulus.
+<tt>W</tt> need not be orthogonal to <tt>V</tt>, but it must not be
+parallel. The function works for the complex quaternion case as well as for
+real quaternions.
+</p>
+
+<h2>Examples</h2>
+<pre>
+&gt;&gt; orthogonal(qi, qj)
+ 
+ans = 0 * I + 0 * J + 1 * K
+</pre>
+
+<h4>&copy; 2008-2013 Stephen J. Sangwine and Nicolas Le Bihan</h4><p><a href="license.html">License terms.</a></p></body></html>

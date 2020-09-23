@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "orthogonal" overload = "false">
+<short>Construct a unit pure quaternion orthogonal to another</short>
+<syntax>U = orthogonal(V, W)</syntax>
+<long>
+<para>
+<code>orthogonal(V, W)</code> constructs and returns a unit pure quaternion
+orthogonal to <code>V</code>, and <code>W</code> if given. <code>V</code>
+and <code>W</code> must be pure quaternions, but need not have unit modulus.
+<code>W</code> need not be orthogonal to <code>V</code>, but it must not be
+parallel. The function works for the complex quaternion case as well as for
+real quaternions.
+</para>
+</long>
+<examples>
+<precode>
+>> orthogonal(qi, qj)
+ 
+ans = 0 * I + 0 * J + 1 * K
+</precode>
+</examples>
+</function>
+
+<!--$Id: orthogonal.xml,v 1.2 2009/02/08 19:35:55 sangwine Exp $-->

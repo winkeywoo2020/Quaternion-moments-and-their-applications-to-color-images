@@ -1,0 +1,10 @@
+/* Style sheet for Quaternion Toolbox help pages.
+   Copyright 2008 Stephen J. Sangwine and Nicolas Le Bihan
+*/ 
+
+h1 {color:#F0F0F0; background-color:#0000C0; margin-top:0ex; padding-left:1ex; font-weight:bold; font-size:2ex;}
+h2 {color:#0000C0; font-weight:bold; font-size:3ex}
+h3 {color:#0000C0; font-weight:bold; font-size:1.5ex}
+h4 {color:#F0F0F0; background-color:#0000C0; margin-top:2ex; padding-left:1ex; font-size:2ex;}
+pre {padding-left:4ex}
+/* $Id: qtfmstyle.css,v 1.2 2009/02/08 19:35:55 sangwine Exp $ */

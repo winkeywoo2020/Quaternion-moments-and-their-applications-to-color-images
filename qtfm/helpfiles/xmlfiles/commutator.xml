@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "commutator" overload = "false">
+<short>Commutator</short>
+<syntax>C = commutator(X, Y)</syntax>
+<long>
+<para>
+<code>C = commutator(X, Y)</code> returns
+<code>X * Y - Y * X</code>.
+The parameters may be quaternions, octonions, or anything else that makes
+sense.
+The multiplication used is matrix multiplication.
+No check is made on whether the parameters are of compatible types.
+</para>
+</long>
+<examples>
+<para>
+Reals commute so the commutator of any two reals will be zero: 
+</para>
+<precode>
+>> commutator(randn, randn)
+
+ans = 0
+</precode>
+<para>
+Matrix multiplication is not commutative, so two chosen at random will have
+a non-zero commutator:
+</para>
+<precode>
+>> commutator(randn(2), randn(2))
+    
+ans =  0.5833    0.7793
+      -1.1566   -0.5833
+</precode>
+<para>
+Quaternions and octonions do not commute so any two of each will have a non-zero
+commutator:
+</para>
+<precode>
+>> commutator(randq, randq)
+ 
+ans = -0.5486 * I + 0.2534 * J + 1.057 * K
+ 
+>> commutator(rando, rando)
+ 
+ans = -0.1776 * I - 0.2875 * J + 0.6161 * K - 0.6575 * L - 0.3949 * M - 1.221 * N + 0.4269 * O
+</precode>
+</examples>
+<seealso>
+<qtfmfun name = "associator"/>
+</seealso>
+<references>
+<reference>Richard D. Schafer,
+'An Introduction to Non-Associative Algebras',
+Academic Press, 1966. Page 13.
+</reference>
+</references>
+</function>
+
+<!--$Id: commutator.xml,v 1.1 2013/03/26 15:10:22 sangwine Exp $-->

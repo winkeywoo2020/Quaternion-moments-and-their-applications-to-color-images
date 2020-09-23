@@ -1,0 +1,64 @@
+<!-- Generated automatically from an XML file of the same name.
+     Copyright: Stephen J. Sangwine and Nicolas Le Bihan, 2008-2013.
+--><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>associator :: Functions (Quaternion Toolbox Function Reference)
+</title><link rel="stylesheet" href="qtfmstyle.css" type="text/css"></head><body><h1>Quaternion Function Reference</h1><h2>associator</h2>
+<p>Associator</p>
+<h2>Syntax</h2><p><tt>A = associator(X, Y, Z)</tt></p>
+<h2>Description</h2>
+<p>
+<tt>A = associator(X, Y, Z)</tt> returns
+<tt>(X * Y) * Z - X * (Y * Z)</tt>.
+The parameters may be quaternions, octonions, or anything else that makes
+sense.
+The multiplication used is matrix multiplication.
+No check is made on whether the parameters are of compatible types.
+</p>
+
+<h2>Examples</h2>
+    <p>
+        Matrix multiplication is associative,
+        so three random real matrices will
+        produce a zero result:
+    </p>
+<pre>
+&gt;&gt; A = randn(2); B = randn(2); C = randn(2);
+&gt;&gt; associator(A, B, C)
+
+ans =
+
+   1.0e-15 *
+
+    0.1110         0
+    0.2220   -0.0555
+</pre>
+<p>
+    Octonions are not associative, but quaternion-like subsets are, as shown
+    below:
+</p>
+<pre>
+&gt;&gt; associator(oi, oj, ok)
+ 
+ans = 0 * I + 0 * J + 0 * K + 0 * L + 0 * M + 0 * N + 0 * O
+ 
+&gt;&gt; associator(oi, ol, oo)
+ 
+ans = 0 * I + 2 * J + 0 * K + 0 * L + 0 * M + 0 * N + 0 * O  
+</pre>
+<p>
+Quaternions are associative, so any three chosen at random will have
+a zero associator.
+</p>
+<pre>
+&gt;&gt; associator(randq, randq, randq)
+ 
+ans = -5.551e-17 * I + 0 * J + 1.11e-16 * K
+</pre>
+
+<h2>See Also</h2>QTFM function: <a href="commutator.html">commutator</a><br>
+<h2>References</h2><ol><li>Richard D. Schafer,
+'An Introduction to Non-Associative Algebras',
+Academic Press, 1966. Page 13.
+</li></ol>
+<h4>&copy; 2008-2013 Stephen J. Sangwine and Nicolas Le Bihan</h4><p><a href="license.html">License terms.</a></p></body></html>

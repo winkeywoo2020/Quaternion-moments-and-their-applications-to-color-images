@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "squeeze" overload = "true">
+<short>Remove singleton dimensions</short>
+<syntax>Y = squeeze(X)</syntax>
+<long>
+<para>
+<code>squeeze(X)</code> removes singleton dimensions from a quaternion array.
+It is a straightforward overloading of the &matlab; function of the same name
+implemented by a common mechanism for quaternion functions that can be
+computed by separate application of the &matlab; function to each component
+of the quaternion array.
+</para>
+</long>
+<seealso>
+<matlabfun name = "squeeze"/>
+</seealso>
+</function>
+
+<!--$Id: squeeze.xml,v 1.2 2009/02/08 19:35:55 sangwine Exp $-->

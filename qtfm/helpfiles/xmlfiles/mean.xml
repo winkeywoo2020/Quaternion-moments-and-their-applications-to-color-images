@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "mean" overload = "true">
+<short>Average or mean value</short>
+<syntax>Y = mean(X, dim)</syntax>
+<long>
+<para>
+<code>mean(X, dim)</code> computes the mean values of the elements of the
+quaternion array <code>X</code> along dimension <code>dim</code>. If
+omitted, <code>dim</code> defaults to the columns of <code>X</code>.
+</para>
+</long>
+<examples>
+<precode>
+>> mean([qi, qj, qk])
+ 
+ans = 0.3333 * I + 0.3333 * J + 0.3333 * K
+</precode>
+</examples>
+<seealso>
+<matlabfun name = "mean"/>
+</seealso>
+</function>
+
+<!--$Id: mean.xml,v 1.2 2009/02/08 19:35:55 sangwine Exp $-->

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "isinf" overload = "true">
+<short>Array elements that are infinite</short>
+<syntax>TF = isinf(X)</syntax>
+<long>
+<para>
+<code>isinf(X)</code> returns logical 1 (<code>true</code>) for array
+elements that contain at least one quaternion component which is
+<code>infinite</code>. It returns logical
+0 (<code>false</code>) at array positions where all quaternion
+components are <code>finite</code>.
+</para>
+</long>
+<seealso>
+<matlabfun name = "isinf"/>
+<qtfmfun name = "isfinite"/>
+</seealso>
+</function>
+
+<!--$Id: isinf.xml,v 1.2 2009/02/08 19:35:55 sangwine Exp $-->

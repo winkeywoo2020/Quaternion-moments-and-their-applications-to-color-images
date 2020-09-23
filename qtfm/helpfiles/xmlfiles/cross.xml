@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "cross" overload = "false">
+<short>Cross product of two pure quaternions</short>
+<syntax>Y = cross(A, B)</syntax>
+<long>
+<para>
+<code>cross(A, B)</code> returns the cross (or vector) product of the two
+arguments, elementwise on the two arrays, which must be pure quaternions,
+or octonions.
+This function is a synonym for <code>vector_product</code>.
+</para>
+</long>
+<seealso>
+<matlabfun name = "cross"/>
+<qtfmfun name = "vector_product"/>
+</seealso>
+</function>
+
+<!--$Id: cross.xml,v 1.4 2013/03/26 15:50:38 sangwine Exp $-->

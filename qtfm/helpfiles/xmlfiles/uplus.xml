@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE function SYSTEM "qtfmfunction.dtd">
+<function name = "uplus" overload = "both">
+<short>+ Uplus</short>
+<syntax>Y = + X</syntax>
+<long>
+<para>
+This function implements the elementwise unary plus operator for quaternion
+arrays.
+</para>
+</long>
+<seealso>
+<qtfmfun name = "plus"/>
+</seealso>
+</function>
+<!--$Id: uplus.xml,v 1.3 2013/03/26 15:50:38 sangwine Exp $-->
